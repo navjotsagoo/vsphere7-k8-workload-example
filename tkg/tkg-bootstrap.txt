@@ -1,0 +1,9 @@
+export CONTROL_PLANE_STORAGE_CLASS=pacific-gold-storage-policy
+export WORKER_STORAGE_CLASS=pacific-gold-storage-policy
+export DEFAULT_STORAGE_CLASS=pacific-gold-storage-policy
+export STORAGE_CLASSES=""
+export CONTROL_PLANE_VM_CLASS=guaranteed-xsmall
+export WORKER_VM_CLASS=guaranteed-xsmall
+export SERVICE_CIDR=100.64.0.0/13
+export SERVICE_DOMAIN=tkg-clusters.vmware.com
+export CLUSTER_CIDR=100.96.0.0/11
