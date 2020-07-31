@@ -1,0 +1,31 @@
+apiVersion: run.tanzu.vmware.com/v1alpha1
+kind: TanzuKubernetesCluster
+metadata:
+  name: tbs-cluster
+  namespace: mission-partner-1
+spec:
+  distribution:
+    version: v1.16.8
+  settings:
+    network:
+      cni:
+        name: calico
+      pods:
+        cidrBlocks:
+        - 100.96.0.0/11
+      serviceDomain: tkg-clusters.vmware.com
+      services:
+        cidrBlocks:
+        - 100.64.0.0/13
+    storage:
+      classes: []
+      defaultClass: pacific-gold-storage-policy
+  topology:
+    controlPlane:
+      class: guaranteed-xsmall
+      count: 1
+      storageClass: pacific-gold-storage-policy
+    workers:
+      class: guaranteed-xsmall
+      count: 2 
+      storageClass: pacific-gold-storage-policy
