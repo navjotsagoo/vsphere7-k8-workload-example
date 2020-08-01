@@ -1,16 +1,16 @@
 apiVersion: run.tanzu.vmware.com/v1alpha1      #TKG API endpoint
 kind: TanzuKubernetesCluster                   #required parameter
 metadata:
-  name: k8-cluster-2                          #cluster name, user defined
+  name: k8-cluster-temp                          #cluster name, user defined
 spec:
   distribution:
-    version: v1.17.7                           #resolved kubernetes version
+    version: v1.16.12+vmware.1-tkg.1.da7afe7  #resolved kubernetes version
   topology:
     controlPlane:
       count: 1                                 #number of control plane nodes
-      class: best-effort-xsmall                 #vmclass for control plane nodes
+      class: best-effort-small                 #vmclass for control plane nodes
       storageClass: pacific-gold-storage-policy         #storageclass for control plane
     workers:
       count: 1                                 #number of worker nodes
-      class: best-effort-xsmall                 #vmclass for worker nodes
+      class: best-effort-small                 #vmclass for worker nodes
       storageClass: pacific-gold-storage-policy         #storageclass for worker nodes
