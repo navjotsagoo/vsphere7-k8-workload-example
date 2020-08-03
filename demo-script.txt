@@ -1,0 +1,43 @@
+TKG DEMO SCRIPT
+
+Namespace
+Switch between VSphere and Kubectl Interfaces
+
+Master & Nodes
+Clusters Deployed in NS
+VMs deployed in NS
+Deployments, Pods,svc,pvc deployed in NS
+Target cluster-2 & show pods, svc
+
+What does it look like to use TKG to provision and manage Kubernetes in your environment?
+Show the NSX Manager for as well. 
+Show the EMPTY vSphere Resources Provisioned through KUBECTL before provisioning a new cluster.  
+Show the CREATED vSphere Resources provisioned through KUBECTL
+
+1. Create with kubectl 
+    - Show the kubenetes tkc manifest
+2. Create with TKG CLI 
+3. Upgrade with TKG CLI
+4. Deploy Workloads into MSP2 namespace 
+5. Deploy Workloads into MSP2 K8 workspace
+6. Delete Clusters
+
+TBS DEMO SCRIPT
+1. List Images (Show in Azure Container Registry) 
+2. Create a New Image from Source in team-parrot
+  a new pod created for each build
+  kp build logs (show logs of the build)
+  Show the image running in kubernetes / prove it is the same image
+3. Update Git and See the outcome - new image from the revision 
+    'kp build list <image>'
+    'kp build status <image>'
+4. Upgrade Buildpack
+  Show 'kp store list' && kp store status default (v of NodeJS Buildpack)
+  Explore buildpack dependencies 
+    kp store status default --verbose | grep -A 20 paketo-buildpacks/nodejs@0.0.3 
+  Show the dependencies includes in the image build
+    'kp build status <image>'
+  Upgrade the buildpack
+    kp store add default nodejs-0.0.4.cnb
+    kp store status default
+    kp build list nodejs-app --namespace team-sparrow
