@@ -4,7 +4,7 @@ metadata:
   name: k8-cluster-2                          #cluster name, user defined
 spec:
   distribution:
-    version: v1.17.7                           #resolved kubernetes version
+    version: v1.17.7+vmware.1-tkg.1.154236c    #resolved kubernetes version
   topology:
     controlPlane:
       count: 1                                 #number of control plane nodes
