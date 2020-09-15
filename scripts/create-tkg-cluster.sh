@@ -1,1 +1,3 @@
-tkg create cluster tkg-cli-cluster-3 --plan=dev --namespace=project-2 --kubernetes-version=v1.16.8+vmware.1-tkg.3.60d2ffd
+#!/bin/bash 
+
+tkg create cluster $1 --plan=dev --namespace=project-tango --kubernetes-version=v1.16.8+vmware.1-tkg.3.60d2ffd

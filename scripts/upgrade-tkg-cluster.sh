@@ -1,1 +1,6 @@
-tkg upgrade cluster k8-demo-cluster-1 --namespace mission-partner-1 --kubernetes-version v1.17.8+vmware.1-tkg.1.5417466
+#!/bin/bash
+
+tkg upgrade cluster $1 \
+	--namespace project-tango \
+	--kubernetes-version $2 \
+	--yes
